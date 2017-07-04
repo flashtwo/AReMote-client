@@ -1,0 +1,40 @@
+.key
+	box-sizing: inherit
+	display: inline-block
+	width: 10%
+	height: 100%
+	padding: 8px 12px
+	margin-bottom: 0
+	margin: 2px
+	font-family: monospace
+	font-size: 20px
+	font-weight: normal
+	color: #ddd
+	line-height: 1.42857143
+	text-align: center
+	white-space: nowrap
+	vertical-align: middle
+	touch-action: manipulation
+	-webkit-user-select: none
+	user-select: none
+	background-image: none
+	background-color: rgba(55, 55, 55, 0.85)
+	border: 1px solid transparent
+	border-radius: 4px
+	&:focus, &:active:focus, &.active:focus, &.focus, &:active.focus, &.active.focus
+	    outline: 5px auto -webkit-focus-ring-color
+	    outline-offset: -2px
+	&:hover, &:focus, &.focus
+	    color: #333
+	    text-decoration: none
+	&:active, &.active
+	    background-image: none
+	    outline: 0
+	    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125)
+	    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125)
+
+#key-caps, #key-backspace, #key-alt, #key-enter
+	width: 15%
+
+#key-space
+	width: 65.6%
