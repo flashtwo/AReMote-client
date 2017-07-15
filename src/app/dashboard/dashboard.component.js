@@ -10,17 +10,14 @@ export class dashboardController {
     }
     constructor() {
         this.id = 'dashboard';
-        // let thisSlide = this.slide;
         window.addEventListener('load', () => {
             this.slide = 'down';
             let el = document.getElementById('slider');
             swipeDetect(el, (swipeDirection) => {
                 if (swipeDirection === 'up')
                     this.slide = 'up';
-                    // thisSlide = 'up';
                 else if (swipeDirection === 'down')
                     this.slide = 'down';
-                    // thisSlide = 'down';
             });
         });
         // window.addEventListener('click', () => {
