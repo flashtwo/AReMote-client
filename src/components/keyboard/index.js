@@ -46,28 +46,28 @@ class Keyboard extends HTMLElement {
     	this.caps = false;
 		// this.alt = false;
     }
-	callToKodi(call) {
-		let isDone = call === 'enter',
-        	str = this.kodiStringMaker(call, isDone);
-		return util.kodiSendText(str, done, callback);
+	callToKodi(input) {
+		let isDone = input === 'enter',
+        	str = this.kodiStringMaker(input, isDone);
+		return util.kodiSendText(str, done);
 	}
-	kodiStringMaker(call, done) {
+	kodiStringMaker(input, done) {
 		let str = this.str,
-			backspace = call === 'backspace';
+			backspace = input === 'backspace';
 		if (!done) str && backspace
 			? str.slice(0, -1)
 			: str
-				? str += call.kodi
-				: str  = call.kodi;
+				? str += input.kodi
+				: str  = input.kodi;
 		return str;
 	}
-    keyClick(call) {
+    keyClick(input) {
     	switch (this.mode) {
     		case 'kodi':
-    			this.callToKodi(call);
+    			this.callToKodi(input);
     			break;
     		default:
-		        // util.callLirc(call, cb);
+		        // util.LircInput(input);
     			break;
     	}
     }

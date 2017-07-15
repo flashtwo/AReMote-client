@@ -31,6 +31,7 @@
     "npm": "^3.9.5"
   },
   "scripts": {
-    "start": "webpack-dev-server --inline"
+    "start": "webpack-dev-server --inline",
+    "package": "docker build -f Dockerfile -t aremote-server ."
   }
 }

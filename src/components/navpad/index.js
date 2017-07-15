@@ -1,4 +1,4 @@
-import util from '../util';
+import { kodiInput } from '../util';
 // Define the element
 class Navpad extends HTMLElement {
 	get mode() {
@@ -10,19 +10,23 @@ class Navpad extends HTMLElement {
     constructor() {
         super();
         this.id = 'navpad';
+        this.mode = 'kodi';
         this.innerHTML = require('./navpad.pug');
     }
     connectedCallback() {
+        let buttons = this.querySelectorAll('[data-input]');
+        buttons.forEach((btn) => {
+            let method = btn.getAttribute('data-input');
+            btn.addEventListener('click', () => this.sendInput(method));
+        });
     }
-	callToKodi(call) {
-	}
-    keyClick(call) {
+    sendInput(method) {
     	switch (this.mode) {
     		case 'kodi':
-    			this.callToKodi(call);
+    			kodiInput(method);
     			break;
     		default:
-		        // util.callLirc(call, cb);
+		        // util.callLirc(method);
     			break;
     	}
     }

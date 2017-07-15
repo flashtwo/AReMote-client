@@ -1,14 +1,20 @@
 .main
-	.btn-nav.center home
-	.btn-nav.center
-		i.fa.fa-arrow-up
-	.btn-nav.center info
-	.btn-nav.right
-		i.fa.fa-arrow-left
-	.btn-nav.center select
-	.btn-nav.left
-		i.fa.fa-arrow-right
-	.btn-nav.center back
-	.btn-nav.center
-		i.fa.fa-arrow-down
-	.btn-nav.center menu
+	.btn-nav.center(data-input='Home')
+		i.fa.fa-home.fa-lg
+	.btn-nav.center(data-input='Up')
+		//- i.fa.fa-arrow-up.fa-lg
+		i.fa.fa-chevron-up.fa-lg
+	.btn-nav.center(data-input='Info')
+		i.fa.fa-info.fa-lg
+	.btn-nav.right(data-input='Left')
+		i.fa.fa-chevron-left.fa-lg
+	.btn-nav.center(data-input='Select')
+		i.fa.fa-bomb.fa-lg
+	.btn-nav.left(data-input='Right')
+		i.fa.fa-chevron-right.fa-lg
+	.btn-nav.center(data-input='Back')
+		i.fa.fa-undo.fa-lg
+	.btn-nav.center(data-input='Down')
+		i.fa.fa-chevron-down.fa-lg
+	.btn-nav.center(data-input='ContextMenu')
+		i.fa.fa-bars.fa-lg
