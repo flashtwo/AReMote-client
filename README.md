@@ -2,6 +2,7 @@
 Client software for ARM-based remote.
 
 _THIS PROJECT IS STILL FINDING ITSELF, BUT INSTALLATION SCRIPTS AND GUIDE ARE IN THE MAKING_
+
 This software currently supports the Raspberry Pi with an up-to-date version of Raspbian, Xorg, and Chromium(v59 and up) installed, and while not a requirement, it's highly recommended your devices have static local addresses, as well as the machine running the server if not installed locally on the Pi.
 
 ### Development
